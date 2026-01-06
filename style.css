@@ -1,0 +1,251 @@
+/* ================================
+   RESET & GLOBAL
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #faf9f7;
+  color: #2f2f2f;
+  overflow-x: hidden;
+}
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ================================
+   SECTION BASE
+================================ */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ================================
+   OPENING GATE
+================================ */
+#opening {
+  position: fixed;
+  inset: 0;
+  background: #f2efe9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#opening h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+#opening h1 {
+  font-size: 34px;
+}
+
+#opening button {
+  margin-top: 32px;
+  padding: 12px 36px;
+  background: transparent;
+  border: 1px solid #2f2f2f;
+  color: #2f2f2f;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#opening button:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+
+#opening.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+#hero {
+  background: #ffffff;
+}
+
+#hero h1 {
+  font-size: 40px;
+}
+
+#hero span {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+/* ================================
+   PROFILE SECTION
+================================ */
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.profile img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.profile h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* ================================
+   EVENT CARD
+================================ */
+.event-card {
+  background: #ffffff;
+  padding: 32px 24px;
+  margin: 24px auto;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.event-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* ================================
+   GALLERY
+================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ================================
+   RSVP FORM
+================================ */
+form {
+  margin-top: 24px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 14px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 14px 40px;
+  border: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+form button:hover {
+  background: #000;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  padding: 60px 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* ================================
+   FADE IN ANIMATION
+================================ */
+.fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (min-width: 768px) {
+  .profile {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+}
