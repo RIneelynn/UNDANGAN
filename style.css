@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #faf9f7;
   color: #2f2f2f;
   overflow-x: hidden;
@@ -17,8 +17,10 @@ body {
 /* ================================
    TYPOGRAPHY
 ================================ */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -147,7 +149,7 @@ section {
   margin: 24px auto;
   max-width: 420px;
   border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .event-card h3 {
@@ -188,7 +190,7 @@ form textarea {
   display: block;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
@@ -248,4 +250,75 @@ footer {
   h1 {
     font-size: 44px;
   }
+}
+
+/* ================================
+   COUNTDOWN
+================================ */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: #ffffff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.time-box span {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  display: block;
+}
+
+.time-box small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.map-btn-lux {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 14px 38px;
+  border: 1px solid #2f2f2f;
+  color: #2f2f2f;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.map-btn-lux::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #2f2f2f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.map-btn-lux span {
+  position: relative;
+  z-index: 1;
+}
+
+.map-btn-lux:hover {
+  color: #fff;
+}
+
+.map-btn-lux:hover::after {
+  transform: scaleX(1);
 }
